@@ -381,13 +381,13 @@
 
         <!-- Coverage Grid -->
         <h2>Coverage Grid</h2>
-        <p class="grid-note">Drone models (rows) x datasets (columns). Cells show sensor types present.</p>
+        <p class="grid-note">Named drone models (rows) x datasets (columns). Only datasets with identified models shown.</p>
         <div class="grid-wrap">
             <table>
                 <thead>
                     <tr>
                         <th>Drone Model</th>
-                        <template x-for="ds in datasets" :key="ds.id">
+                        <template x-for="ds in gridDatasets()" :key="ds.id">
                             <th x-text="ds.name"></th>
                         </template>
                     </tr>
@@ -396,7 +396,7 @@
                     <template x-for="model in allModels()" :key="model">
                         <tr>
                             <td x-text="model"></td>
-                            <template x-for="ds in datasets" :key="ds.id">
+                            <template x-for="ds in gridDatasets()" :key="ds.id">
                                 <td>
                                     <span x-show="ds.drone_models.includes(model)"
                                           class="badge"
@@ -459,14 +459,25 @@ function kampfraum() {
             });
         },
 
+        isNamedModel(m) {
+            const skip = /^\d|multiple|various|mixed|unknown|see paper|see dataset|categories|types|models|classes|swarm|targets|mounted|equipped|synthetic|scenarios|propellers|consumer/i;
+            return !skip.test(m);
+        },
+
         allModels() {
             const models = new Set();
             for (const ds of this.datasets) {
                 for (const m of ds.drone_models) {
-                    models.add(m);
+                    if (this.isNamedModel(m)) models.add(m);
                 }
             }
             return [...models].sort();
+        },
+
+        gridDatasets() {
+            return this.datasets.filter(ds =>
+                ds.drone_models.some(m => this.isNamedModel(m))
+            );
         },
 
         sensorBadge(type) {
