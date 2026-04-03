@@ -1,0 +1,89 @@
+{
+  "datasets": [
+    {
+      "id": "dronerf",
+      "name": "DroneRF",
+      "source_url": "https://dx.doi.org/10.17632/f4c2b4n755.1",
+      "license": "CC BY 4.0",
+      "sensor_type": "rf",
+      "drone_models": ["Parrot Bebop", "Parrot AR", "DJI Phantom"],
+      "environment": "lab",
+      "size_gb": 40,
+      "format": "csv",
+      "operational_gap": true,
+      "notes": "No EW environment. Commercial drones only."
+    },
+    {
+      "id": "rfuav",
+      "name": "RFUAV",
+      "source_url": "https://github.com/kitoweeknd/RFUAV",
+      "license": "Unknown",
+      "sensor_type": "rf",
+      "drone_models": [
+        "DJI Mavic Air 2", "DJI Mini 2", "DJI Phantom 4 Pro",
+        "DJI Inspire 2", "DJI Matrice 300", "DJI FPV",
+        "Autel EVO II", "Parrot Anafi", "Skydio 2",
+        "Yuneec Typhoon H", "FIMI X8 SE", "Hubsan Zino",
+        "Holy Stone HS720", "Potensic Dreamer", "Ruko F11",
+        "Snaptain SP7100", "Contixo F24 Pro", "EXO X7 Ranger",
+        "Bwine F7", "Syma X500", "SJRC F11 4K Pro",
+        "MJX Bugs 16 Pro", "Eachine EX5", "Walkera Vitus",
+        "Xiaomi FIMI A3", "ZLL SG906 Max", "Potensic Atom",
+        "Holy Stone HS175D", "Ryze Tello", "Cheerson CX-20",
+        "Hubsan H501S", "WLtoys Q333", "JJRC X12",
+        "Eachine E520S", "Visuo ZEN K1", "GoolRC SG907",
+        "KF102"
+      ],
+      "environment": "lab",
+      "size_gb": 1300,
+      "format": "raw_iq",
+      "operational_gap": true,
+      "notes": "Largest open RF dataset. USRP-collected. Variable SNR. No contested environment."
+    },
+    {
+      "id": "dronedetect",
+      "name": "DroneDetect",
+      "source_url": "https://ieee-dataport.org/open-access/dronedetect-dataset-radio-frequency-dataset-unmanned-aerial-system-uas-signals-machine",
+      "license": "CC BY 4.0",
+      "sensor_type": "rf",
+      "drone_models": [
+        "DJI Mavic Pro", "DJI Mavic Air", "DJI Phantom 4",
+        "DJI Inspire 1", "DJI Matrice 100",
+        "Parrot Disco", "Parrot Bebop 2"
+      ],
+      "environment": "lab",
+      "size_gb": 3.5,
+      "format": "mat",
+      "operational_gap": true,
+      "notes": "BladeRF SDR. Includes Bluetooth/WiFi interference variants. No operational environment."
+    },
+    {
+      "id": "zenodo_rf_video",
+      "name": "Zenodo RF/Video",
+      "source_url": "https://zenodo.org/record/4264467",
+      "license": "CC BY 4.0",
+      "sensor_type": "multimodal",
+      "drone_models": ["DJI Phantom 4"],
+      "environment": "field",
+      "size_gb": 2.1,
+      "format": "csv_mp4",
+      "operational_gap": true,
+      "notes": "RF + video multimodal. Single drone model. No EW interference."
+    },
+    {
+      "id": "acoustic_multiclass",
+      "name": "Acoustic Multiclass",
+      "source_url": "https://arxiv.org/abs/2509.04715",
+      "license": "Unknown",
+      "sensor_type": "acoustic",
+      "drone_models": [
+        "32 categories — see paper for full list"
+      ],
+      "environment": "lab",
+      "size_gb": null,
+      "format": "spectrogram_mfcc",
+      "operational_gap": true,
+      "notes": "32 drone categories. Spectrograms and MFCCs. Data release URL not yet located."
+    }
+  ]
+}

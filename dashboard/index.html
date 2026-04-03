@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampfraum — Open Drone Detection Dataset Aggregator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+
+<div x-data="kampfraum()" x-init="init()" x-cloak>
+
+    <!-- Header -->
+    <header class="border-b border-zinc-800 px-6 py-8">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-3xl font-bold tracking-tight">Kampfraum</h1>
+            <p class="text-zinc-400 mt-2">Open drone detection dataset aggregator. RF, acoustic, multimodal.</p>
+        </div>
+    </header>
+
+    <!-- Gap Section -->
+    <section class="bg-amber-950/40 border-b border-amber-900/50 px-6 py-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-lg font-semibold text-amber-200 mb-3">What's missing</h2>
+            <p class="text-amber-100/90 leading-relaxed">
+                Kampfraum contains what is publicly available. What is missing is the actual battlespace:
+                EW-contested environments, fiber-optic FPV drones, Shahed/Geran acoustic signatures,
+                and operationally labeled flight data. The Ukraine Ministry of Defence has opened a
+                data partnership framework for allied defense companies.
+                <a href="https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/"
+                   class="underline text-amber-300 hover:text-amber-200" target="_blank" rel="noopener">Apply here.</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="px-6 py-6 border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto flex flex-wrap gap-4">
+            <div>
+                <label class="text-xs text-zinc-500 uppercase tracking-wider">Sensor Type</label>
+                <select x-model="filterSensor" class="mt-1 block bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm">
+                    <option value="">All</option>
+                    <option value="rf">RF</option>
+                    <option value="acoustic">Acoustic</option>
+                    <option value="multimodal">Multimodal</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-xs text-zinc-500 uppercase tracking-wider">Environment</label>
+                <select x-model="filterEnv" class="mt-1 block bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm">
+                    <option value="">All</option>
+                    <option value="lab">Lab</option>
+                    <option value="field">Field</option>
+                    <option value="contested">Contested</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-xs text-zinc-500 uppercase tracking-wider">Search</label>
+                <input x-model="search" type="text" placeholder="drone model, dataset..."
+                       class="mt-1 block bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm w-64" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Dataset Table -->
+    <section class="px-6 py-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-xl font-semibold mb-4">Datasets</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-left text-zinc-500 border-b border-zinc-800">
+                            <th class="pb-2 pr-4">Dataset</th>
+                            <th class="pb-2 pr-4">Sensor</th>
+                            <th class="pb-2 pr-4">Drone Models</th>
+                            <th class="pb-2 pr-4">Environment</th>
+                            <th class="pb-2 pr-4">Size</th>
+                            <th class="pb-2 pr-4">License</th>
+                            <th class="pb-2">Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="ds in filtered()" :key="ds.id">
+                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50">
+                                <td class="py-3 pr-4 font-medium" x-text="ds.name"></td>
+                                <td class="py-3 pr-4">
+                                    <span class="px-2 py-0.5 rounded text-xs font-mono"
+                                          :class="sensorColor(ds.sensor_type)"
+                                          x-text="ds.sensor_type"></span>
+                                </td>
+                                <td class="py-3 pr-4 text-zinc-400 max-w-xs truncate" x-text="ds.drone_models.join(', ')"></td>
+                                <td class="py-3 pr-4 text-zinc-400" x-text="ds.environment"></td>
+                                <td class="py-3 pr-4 text-zinc-400" x-text="ds.size_gb ? ds.size_gb + ' GB' : 'TBD'"></td>
+                                <td class="py-3 pr-4 text-zinc-400" x-text="ds.license"></td>
+                                <td class="py-3">
+                                    <a :href="ds.source_url" target="_blank" rel="noopener"
+                                       class="text-blue-400 hover:text-blue-300 underline">Link</a>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Grid -->
+    <section class="px-6 py-8 border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-xl font-semibold mb-4">Coverage Grid</h2>
+            <p class="text-zinc-500 text-sm mb-4">Drone models (rows) × datasets (columns). Cells show sensor types present.</p>
+            <div class="overflow-x-auto">
+                <table class="text-xs">
+                    <thead>
+                        <tr class="text-left text-zinc-500">
+                            <th class="pb-2 pr-4 sticky left-0 bg-zinc-950">Drone Model</th>
+                            <template x-for="ds in datasets" :key="ds.id">
+                                <th class="pb-2 px-3 text-center whitespace-nowrap" x-text="ds.name"></th>
+                            </template>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="model in allModels()" :key="model">
+                            <tr class="border-t border-zinc-800/30">
+                                <td class="py-1.5 pr-4 text-zinc-300 whitespace-nowrap sticky left-0 bg-zinc-950" x-text="model"></td>
+                                <template x-for="ds in datasets" :key="ds.id">
+                                    <td class="py-1.5 px-3 text-center">
+                                        <span x-show="ds.drone_models.includes(model)"
+                                              class="px-1.5 py-0.5 rounded text-xs"
+                                              :class="sensorColor(ds.sensor_type)"
+                                              x-text="ds.sensor_type"></span>
+                                        <span x-show="!ds.drone_models.includes(model)"
+                                              class="text-zinc-800">—</span>
+                                    </td>
+                                </template>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 px-6 py-8 mt-8">
+        <div class="max-w-6xl mx-auto text-center text-zinc-500 text-sm">
+            <p>Gebrüder Ottenheimer &mdash; <a href="https://gebruder.ottenheimer.app" class="underline hover:text-zinc-300">gebruder.ottenheimer.app</a></p>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+function kampfraum() {
+    return {
+        datasets: [],
+        filterSensor: '',
+        filterEnv: '',
+        search: '',
+
+        async init() {
+            try {
+                const base = window.location.pathname.replace(/\/[^/]*$/, '');
+                let resp = await fetch(base + '/catalog.json');
+                if (!resp.ok) {
+                    resp = await fetch('../catalog.json');
+                }
+                const data = await resp.json();
+                this.datasets = data.datasets;
+            } catch (e) {
+                console.error('Failed to load catalog.json:', e);
+            }
+        },
+
+        filtered() {
+            return this.datasets.filter(ds => {
+                if (this.filterSensor && ds.sensor_type !== this.filterSensor) return false;
+                if (this.filterEnv && ds.environment !== this.filterEnv) return false;
+                if (this.search) {
+                    const q = this.search.toLowerCase();
+                    const hay = (ds.name + ' ' + ds.drone_models.join(' ') + ' ' + ds.sensor_type + ' ' + ds.notes).toLowerCase();
+                    if (!hay.includes(q)) return false;
+                }
+                return true;
+            });
+        },
+
+        allModels() {
+            const models = new Set();
+            for (const ds of this.datasets) {
+                for (const m of ds.drone_models) {
+                    models.add(m);
+                }
+            }
+            return [...models].sort();
+        },
+
+        sensorColor(type) {
+            return {
+                'rf': 'bg-blue-900/60 text-blue-300',
+                'acoustic': 'bg-green-900/60 text-green-300',
+                'multimodal': 'bg-purple-900/60 text-purple-300',
+                'visual': 'bg-orange-900/60 text-orange-300',
+            }[type] || 'bg-zinc-800 text-zinc-400';
+        }
+    };
+}
+</script>
+
+</body>
+</html>

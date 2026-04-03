@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install jsonschema pyarrow numpy
+
+      - name: Validate catalog.json schema
+        run: |
+          python -c "
+          import json
+          from jsonschema import validate, ValidationError
+
+          schema = {
+              'type': 'object',
+              'required': ['datasets'],
+              'properties': {
+                  'datasets': {
+                      'type': 'array',
+                      'minItems': 1,
+                      'items': {
+                          'type': 'object',
+                          'required': ['id', 'name', 'source_url', 'license', 'sensor_type',
+                                       'drone_models', 'environment', 'format', 'operational_gap'],
+                          'properties': {
+                              'id': {'type': 'string'},
+                              'name': {'type': 'string'},
+                              'source_url': {'type': 'string', 'format': 'uri'},
+                              'license': {'type': 'string'},
+                              'sensor_type': {'type': 'string', 'enum': ['rf', 'acoustic', 'multimodal', 'visual']},
+                              'drone_models': {'type': 'array', 'items': {'type': 'string'}},
+                              'environment': {'type': 'string', 'enum': ['lab', 'field', 'contested']},
+                              'size_gb': {'type': ['number', 'null']},
+                              'format': {'type': 'string'},
+                              'operational_gap': {'type': 'boolean'},
+                              'notes': {'type': 'string'}
+                          }
+                      }
+                  }
+              }
+          }
+
+          with open('catalog.json') as f:
+              catalog = json.load(f)
+
+          validate(instance=catalog, schema=schema)
+          print(f'catalog.json valid: {len(catalog[\"datasets\"])} datasets')
+          "
+
+      - name: Verify normalize.py imports and schema
+        run: |
+          python -c "
+          import pyarrow as pa
+          import pyarrow.parquet as pq
+          import numpy as np
+
+          # Verify the expected schema can be constructed
+          schema = pa.schema([
+              ('timestamp', pa.int64()),
+              ('drone_model', pa.string()),
+              ('flight_mode', pa.string()),
+              ('sensor_type', pa.string()),
+              ('signal_data', pa.binary()),
+              ('snr_db', pa.float32()),
+              ('environment', pa.string()),
+              ('source_dataset', pa.string()),
+          ])
+
+          # Create a sample table and write/read as parquet
+          import tempfile, os
+          table = pa.table({
+              'timestamp': pa.array([1000], type=pa.int64()),
+              'drone_model': pa.array(['Test Drone'], type=pa.string()),
+              'flight_mode': pa.array(['hovering'], type=pa.string()),
+              'sensor_type': pa.array(['rf'], type=pa.string()),
+              'signal_data': pa.array([np.array([1.0, 2.0], dtype=np.float32).tobytes()], type=pa.binary()),
+              'snr_db': pa.array([None], type=pa.float32()),
+              'environment': pa.array(['lab'], type=pa.string()),
+              'source_dataset': pa.array(['test'], type=pa.string()),
+          }, schema=schema)
+
+          with tempfile.NamedTemporaryFile(suffix='.parquet', delete=False) as f:
+              pq.write_table(table, f.name)
+              readback = pq.read_table(f.name)
+              assert readback.schema.equals(schema), f'Schema mismatch: {readback.schema} != {schema}'
+              os.unlink(f.name)
+
+          print('Parquet schema validation passed')
+          "

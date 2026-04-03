@@ -1,0 +1,32 @@
+# Dataset binary files — fetch scripts reproduce these
+datasets/rf/*.csv
+datasets/rf/*.parquet
+datasets/rf/rfuav/
+datasets/rf/dronedetect/
+datasets/acoustic/*.wav
+datasets/acoustic/*.npy
+datasets/acoustic/*.parquet
+datasets/multimodal/*.parquet
+datasets/**/*.zip
+datasets/**/*.tar.gz
+datasets/**/*.h5
+datasets/**/*.hdf5
+datasets/**/*.bin
+datasets/**/*.dat
+
+# Fetch completion markers
+datasets/**/.fetched
+
+# Zenodo downloads
+datasets/rf/zenodo/
+datasets/multimodal/zenodo/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
