@@ -44,7 +44,7 @@ To add a dataset:
 
 ## Dashboard
 
-Live at [gebruder.github.io/kampfraum](https://gebruder.github.io/kampfraum)
+Live at [gebruder.ottenheimer.app/kampfraum](https://gebruder.ottenheimer.app/kampfraum)
 
 ---
 
