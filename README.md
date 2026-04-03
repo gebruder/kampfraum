@@ -27,9 +27,11 @@ All datasets are converted to Parquet with the following schema:
 | `environment` | string | lab / field / contested |
 | `source_dataset` | string | Catalog ID |
 
-## What's Missing
+## What's Missing / Was fehlt
 
 Kampfraum collects publicly available data into an easier interface. It does not have private battlespace: EW-contested environments, fiber-optic FPV drones, Shahed/Geran acoustic signatures, and operationally labeled flight data. Ukraine's Ministry of Defence has opened a [data partnership framework](https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/) for allied defense companies to access real combat data.
+
+Kampfraum sammelt offen verfügbare Daten in einer einfacheren Oberfläche. Es enthält keine privaten Gefechtsfelddaten: EW-belastete Umgebungen, Glasfaser-FPV-Drohnen, akustische Signaturen von Shahed/Geran und operativ gekennzeichnete Flugdaten. Das ukrainische Verteidigungsministerium hat ein [Datenpartnerschaftsprogramm](https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/) für alliierte Rüstungsunternehmen zum Zugang zu echten Kampfdaten eröffnet.
 
 ## Contributing
 
