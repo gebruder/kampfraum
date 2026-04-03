@@ -29,7 +29,7 @@ All datasets are converted to Parquet with the following schema:
 
 ## What's Missing
 
-Kampfraum contains what is publicly available. What is missing is the actual battlespace: EW-contested environments, fiber-optic FPV drones, Shahed/Geran acoustic signatures, and operationally labeled flight data. The Ukraine Ministry of Defence has opened a data partnership framework for allied defense companies. [Apply here.](https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/)
+Kampfraum collects publicly available data into an easier interface. It does not have private battlespace: EW-contested environments, fiber-optic FPV drones, Shahed/Geran acoustic signatures, and operationally labeled flight data. Ukraine's Ministry of Defence has opened a [data partnership framework](https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/) for allied defense companies to access real combat data.
 
 ## Contributing
 
