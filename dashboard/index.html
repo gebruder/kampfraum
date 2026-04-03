@@ -4,162 +4,429 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kampfraum - Open Drone Detection Dataset Aggregator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
+        @font-face {
+            font-family: 'Michroma';
+            src: url('/static/fonts/Michroma-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         [x-cloak] { display: none !important; }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #0a0a0a;
+            color: #d0d0d0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .michroma {
+            font-family: 'Michroma', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .brand-link {
+            font-family: 'Michroma', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #555;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .brand-link:hover { color: #ccc; }
+        .nav-link {
+            font-family: 'Michroma', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #555;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .nav-link:hover { color: #ccc; }
+
+        /* Page title */
+        h1 {
+            font-family: 'Michroma', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fff;
+            font-size: 28px;
+            margin-top: 48px;
+        }
+        .subtitle {
+            color: #666;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Section headers */
+        h2 {
+            font-family: 'Michroma', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #888;
+            border-top: 1px solid #1a1a1a;
+            padding-top: 32px;
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        /* Links */
+        a {
+            color: #888;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+        a:hover {
+            color: #ccc;
+            border-bottom-color: #666;
+        }
+
+        /* Gap section */
+        .gap-section {
+            margin-top: 32px;
+        }
+        .gap-en {
+            color: #d0d0d0;
+        }
+        .gap-de {
+            color: #666;
+            font-size: 15px;
+            margin-top: 12px;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .filter-group label {
+            display: block;
+            font-family: 'Michroma', sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 6px;
+        }
+        .filter-group select,
+        .filter-group input {
+            background: #111;
+            border: 1px solid #222;
+            color: #d0d0d0;
+            font-size: 14px;
+            padding: 8px 12px;
+            font-family: inherit;
+            outline: none;
+        }
+        .filter-group select:focus,
+        .filter-group input:focus {
+            border-color: #444;
+        }
+        .filter-group input {
+            width: 240px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th {
+            font-family: 'Michroma', sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666;
+            text-align: left;
+            padding: 8px 12px 8px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-weight: normal;
+        }
+        td {
+            padding: 10px 12px 10px 0;
+            border-bottom: 1px solid #1a1a1a;
+            color: #d0d0d0;
+            vertical-align: top;
+        }
+        tr:hover td {
+            background: #111;
+        }
+        .cell-secondary {
+            color: #666;
+        }
+        .cell-models {
+            color: #666;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Sensor badges */
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-family: monospace;
+        }
+        .badge-rf { background: rgba(100,140,200,0.15); color: #8ab4f8; }
+        .badge-acoustic { background: rgba(100,180,120,0.15); color: #81c995; }
+        .badge-multimodal { background: rgba(160,120,200,0.15); color: #c4a8e0; }
+        .badge-visual { background: rgba(200,150,100,0.15); color: #d4a574; }
+        .badge-default { background: #1a1a1a; color: #666; }
+
+        /* Coverage grid */
+        .grid-wrap {
+            overflow-x: auto;
+            margin-top: 16px;
+        }
+        .grid-wrap table {
+            font-size: 12px;
+        }
+        .grid-wrap th {
+            text-align: center;
+            padding: 8px 12px;
+            white-space: nowrap;
+        }
+        .grid-wrap th:first-child {
+            text-align: left;
+            position: sticky;
+            left: 0;
+            background: #0a0a0a;
+            z-index: 1;
+        }
+        .grid-wrap td {
+            text-align: center;
+            padding: 6px 12px;
+        }
+        .grid-wrap td:first-child {
+            text-align: left;
+            white-space: nowrap;
+            position: sticky;
+            left: 0;
+            background: #0a0a0a;
+            z-index: 1;
+            color: #999;
+        }
+        .grid-empty {
+            color: #222;
+        }
+        .grid-note {
+            color: #666;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #222;
+            padding: 40px 0;
+            margin-top: 48px;
+        }
+        .footer-brand {
+            font-family: 'Michroma', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #555;
+        }
+        .footer-sub {
+            font-size: 13px;
+            color: #444;
+            margin-top: 8px;
+        }
+        .footer-sub a {
+            color: #444;
+            border-bottom: 1px solid #333;
+        }
+        .footer-sub a:hover {
+            color: #888;
+            border-bottom-color: #666;
+        }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+<body>
 
 <div x-data="kampfraum()" x-init="init()" x-cloak>
 
     <!-- Header -->
-    <header class="border-b border-zinc-800 px-6 py-8">
-        <div class="max-w-6xl mx-auto">
-            <h1 class="text-3xl font-bold tracking-tight">Kampfraum</h1>
-            <p class="text-zinc-400 mt-2">Open drone detection dataset aggregator. RF, acoustic, multimodal.</p>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="https://gebruder.ottenheimer.app" class="brand-link">Gebrüder Ottenheimer</a>
+                <a href="https://gebruder.ottenheimer.app/briefs" class="nav-link">Briefs</a>
+            </div>
         </div>
     </header>
 
-    <!-- Gap Section -->
-    <section class="bg-amber-950/40 border-b border-amber-900/50 px-6 py-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-lg font-semibold text-amber-200 mb-3">What's missing / Was fehlt</h2>
-            <p class="text-amber-100/90 leading-relaxed">
+    <div class="container">
+
+        <!-- Title -->
+        <h1>Kampfraum</h1>
+        <p class="subtitle">Open drone detection dataset aggregator. RF, acoustic, multimodal.</p>
+
+        <!-- Gap Section -->
+        <h2>What's missing / Was fehlt</h2>
+        <div class="gap-section">
+            <p class="gap-en">
                 Kampfraum collects publicly available data into an easier interface. It does not have
                 private battlespace: EW-contested environments, fiber-optic FPV drones, Shahed/Geran
                 acoustic signatures, and operationally labeled flight data. Ukraine's Ministry of
                 Defence has opened a
                 <a href="https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/"
-                   class="underline text-amber-300 hover:text-amber-200" target="_blank" rel="noopener">data partnership framework</a>
+                   target="_blank" rel="noopener">data partnership framework</a>
                 for allied defense companies to access real combat data.
             </p>
-            <p class="text-amber-100/70 leading-relaxed mt-3 text-sm">
+            <p class="gap-de">
                 Kampfraum sammelt offen verfügbare Daten in einer einfacheren Oberfläche. Es enthält
                 keine privaten Gefechtsfelddaten: EW-belastete Umgebungen, Glasfaser-FPV-Drohnen,
                 akustische Signaturen von Shahed/Geran und operativ gekennzeichnete Flugdaten. Das
                 ukrainische Verteidigungsministerium hat ein
                 <a href="https://militarytimes.com/flashpoints/ukraine/2026/03/13/ukraine-opens-battlefield-ai-data-to-allies-in-world-first-move/"
-                   class="underline text-amber-300 hover:text-amber-200" target="_blank" rel="noopener">Datenpartnerschaftsprogramm</a>
+                   target="_blank" rel="noopener">Datenpartnerschaftsprogramm</a>
                 für alliierte Rüstungsunternehmen zum Zugang zu echten Kampfdaten eröffnet.
             </p>
         </div>
-    </section>
 
-    <!-- Filters -->
-    <section class="px-6 py-6 border-b border-zinc-800">
-        <div class="max-w-6xl mx-auto flex flex-wrap gap-4">
-            <div>
-                <label class="text-xs text-zinc-500 uppercase tracking-wider">Sensor Type</label>
-                <select x-model="filterSensor" class="mt-1 block bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm">
+        <!-- Filters -->
+        <h2>Filter</h2>
+        <div class="filters">
+            <div class="filter-group">
+                <label>Sensor Type</label>
+                <select x-model="filterSensor">
                     <option value="">All</option>
                     <option value="rf">RF</option>
                     <option value="acoustic">Acoustic</option>
                     <option value="multimodal">Multimodal</option>
                 </select>
             </div>
-            <div>
-                <label class="text-xs text-zinc-500 uppercase tracking-wider">Environment</label>
-                <select x-model="filterEnv" class="mt-1 block bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm">
+            <div class="filter-group">
+                <label>Environment</label>
+                <select x-model="filterEnv">
                     <option value="">All</option>
                     <option value="lab">Lab</option>
                     <option value="field">Field</option>
                     <option value="contested">Contested</option>
                 </select>
             </div>
-            <div>
-                <label class="text-xs text-zinc-500 uppercase tracking-wider">Search</label>
-                <input x-model="search" type="text" placeholder="drone model, dataset..."
-                       class="mt-1 block bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm w-64" />
+            <div class="filter-group">
+                <label>Search</label>
+                <input x-model="search" type="text" placeholder="drone model, dataset...">
             </div>
         </div>
-    </section>
 
-    <!-- Dataset Table -->
-    <section class="px-6 py-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-xl font-semibold mb-4">Datasets</h2>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm">
-                    <thead>
-                        <tr class="text-left text-zinc-500 border-b border-zinc-800">
-                            <th class="pb-2 pr-4">Dataset</th>
-                            <th class="pb-2 pr-4">Sensor</th>
-                            <th class="pb-2 pr-4">Drone Models</th>
-                            <th class="pb-2 pr-4">Environment</th>
-                            <th class="pb-2 pr-4">Size</th>
-                            <th class="pb-2 pr-4">License</th>
-                            <th class="pb-2">Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <template x-for="ds in filtered()" :key="ds.id">
-                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50">
-                                <td class="py-3 pr-4 font-medium" x-text="ds.name"></td>
-                                <td class="py-3 pr-4">
-                                    <span class="px-2 py-0.5 rounded text-xs font-mono"
-                                          :class="sensorColor(ds.sensor_type)"
-                                          x-text="ds.sensor_type"></span>
-                                </td>
-                                <td class="py-3 pr-4 text-zinc-400 max-w-xs truncate" x-text="ds.drone_models.join(', ')"></td>
-                                <td class="py-3 pr-4 text-zinc-400" x-text="ds.environment"></td>
-                                <td class="py-3 pr-4 text-zinc-400" x-text="ds.size_gb ? ds.size_gb + ' GB' : 'TBD'"></td>
-                                <td class="py-3 pr-4 text-zinc-400" x-text="ds.license"></td>
-                                <td class="py-3">
-                                    <a :href="ds.source_url" target="_blank" rel="noopener"
-                                       class="text-blue-400 hover:text-blue-300 underline">Link</a>
-                                </td>
-                            </tr>
+        <!-- Dataset Table -->
+        <h2>Datasets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dataset</th>
+                    <th>Sensor</th>
+                    <th>Drone Models</th>
+                    <th>Environment</th>
+                    <th>Size</th>
+                    <th>License</th>
+                    <th>Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template x-for="ds in filtered()" :key="ds.id">
+                    <tr>
+                        <td x-text="ds.name" style="color:#fff"></td>
+                        <td>
+                            <span class="badge"
+                                  :class="sensorBadge(ds.sensor_type)"
+                                  x-text="ds.sensor_type"></span>
+                        </td>
+                        <td class="cell-models" x-text="ds.drone_models.join(', ')"></td>
+                        <td class="cell-secondary" x-text="ds.environment"></td>
+                        <td class="cell-secondary" x-text="ds.size_gb ? ds.size_gb + ' GB' : 'TBD'"></td>
+                        <td class="cell-secondary" x-text="ds.license"></td>
+                        <td>
+                            <a :href="ds.source_url" target="_blank" rel="noopener">Link</a>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+
+        <!-- Coverage Grid -->
+        <h2>Coverage Grid</h2>
+        <p class="grid-note">Drone models (rows) x datasets (columns). Cells show sensor types present.</p>
+        <div class="grid-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Drone Model</th>
+                        <template x-for="ds in datasets" :key="ds.id">
+                            <th x-text="ds.name"></th>
                         </template>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coverage Grid -->
-    <section class="px-6 py-8 border-t border-zinc-800">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-xl font-semibold mb-4">Coverage Grid</h2>
-            <p class="text-zinc-500 text-sm mb-4">Drone models (rows) x datasets (columns). Cells show sensor types present.</p>
-            <div class="overflow-x-auto">
-                <table class="text-xs">
-                    <thead>
-                        <tr class="text-left text-zinc-500">
-                            <th class="pb-2 pr-4 sticky left-0 bg-zinc-950">Drone Model</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template x-for="model in allModels()" :key="model">
+                        <tr>
+                            <td x-text="model"></td>
                             <template x-for="ds in datasets" :key="ds.id">
-                                <th class="pb-2 px-3 text-center whitespace-nowrap" x-text="ds.name"></th>
+                                <td>
+                                    <span x-show="ds.drone_models.includes(model)"
+                                          class="badge"
+                                          :class="sensorBadge(ds.sensor_type)"
+                                          x-text="ds.sensor_type"></span>
+                                    <span x-show="!ds.drone_models.includes(model)"
+                                          class="grid-empty">-</span>
+                                </td>
                             </template>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <template x-for="model in allModels()" :key="model">
-                            <tr class="border-t border-zinc-800/30">
-                                <td class="py-1.5 pr-4 text-zinc-300 whitespace-nowrap sticky left-0 bg-zinc-950" x-text="model"></td>
-                                <template x-for="ds in datasets" :key="ds.id">
-                                    <td class="py-1.5 px-3 text-center">
-                                        <span x-show="ds.drone_models.includes(model)"
-                                              class="px-1.5 py-0.5 rounded text-xs"
-                                              :class="sensorColor(ds.sensor_type)"
-                                              x-text="ds.sensor_type"></span>
-                                        <span x-show="!ds.drone_models.includes(model)"
-                                              class="text-zinc-800">-</span>
-                                    </td>
-                                </template>
-                            </tr>
-                        </template>
-                    </tbody>
-                </table>
-            </div>
+                    </template>
+                </tbody>
+            </table>
         </div>
-    </section>
+
+    </div>
 
     <!-- Footer -->
-    <footer class="border-t border-zinc-800 px-6 py-8 mt-8">
-        <div class="max-w-6xl mx-auto text-center text-zinc-500 text-sm">
-            <p>Gebrüder Ottenheimer - <a href="https://gebruder.ottenheimer.app" class="underline hover:text-zinc-300">gebruder.ottenheimer.app</a></p>
+    <footer>
+        <div class="container">
+            <div class="footer-brand">Gebrüder Ottenheimer</div>
+            <div class="footer-sub"><a href="https://ottenheimer.app">ottenheimer.app</a></div>
         </div>
     </footer>
 
@@ -210,13 +477,13 @@ function kampfraum() {
             return [...models].sort();
         },
 
-        sensorColor(type) {
+        sensorBadge(type) {
             return {
-                'rf': 'bg-blue-900/60 text-blue-300',
-                'acoustic': 'bg-green-900/60 text-green-300',
-                'multimodal': 'bg-purple-900/60 text-purple-300',
-                'visual': 'bg-orange-900/60 text-orange-300',
-            }[type] || 'bg-zinc-800 text-zinc-400';
+                'rf': 'badge-rf',
+                'acoustic': 'badge-acoustic',
+                'multimodal': 'badge-multimodal',
+                'visual': 'badge-visual',
+            }[type] || 'badge-default';
         }
     };
 }
