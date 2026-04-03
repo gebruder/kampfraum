@@ -537,6 +537,71 @@
       "format": "images_yolo",
       "operational_gap": true,
       "notes": "3,000+ images with YOLO annotations. Various environmental conditions and camera perspectives."
+    },
+    {
+      "id": "opensky_adsb",
+      "name": "OpenSky Network",
+      "source_url": "https://opensky-network.org/data/",
+      "license": "CC BY-NC-SA 4.0",
+      "sensor_type": "rf",
+      "drone_models": ["ADS-B equipped aircraft and some drones"],
+      "environment": "field",
+      "size_gb": null,
+      "format": "csv_sql",
+      "operational_gap": true,
+      "notes": "Global crowdsourced ADS-B network. 4,000+ receivers. Terabytes of historical flight data. Drone data must be filtered from manned aircraft."
+    },
+    {
+      "id": "texbat",
+      "name": "TEXBAT",
+      "source_url": "https://radionavlab.ae.utexas.edu/texbat/",
+      "license": "Research use",
+      "sensor_type": "rf",
+      "drone_models": ["GPS spoofing scenarios - not drone-specific"],
+      "environment": "lab",
+      "size_gb": null,
+      "format": "bin",
+      "operational_gap": true,
+      "notes": "Texas Spoofing Test Battery. 8 GPS L1 C/A spoofing scenarios. Gold standard for GPS spoofing detection research. Applicable to drone GPS vulnerabilities."
+    },
+    {
+      "id": "cranfield_synthetic",
+      "name": "Cranfield Synthetic",
+      "source_url": "https://github.com/mazqtpopx/cranfield-synthetic-drone-detection",
+      "license": "CC BY 4.0",
+      "sensor_type": "visual",
+      "drone_models": ["Synthetic drone models"],
+      "environment": "lab",
+      "size_gb": null,
+      "format": "images_masks",
+      "operational_gap": true,
+      "notes": "Synthetic drone images with pixel-accurate segmentation masks. Structured domain randomization. Tested against MAV-Vid, Drone-vs-Bird, Anti-UAV."
+    },
+    {
+      "id": "aerpaw",
+      "name": "AERPAW",
+      "source_url": "https://aerpaw.org/experiments/datasets/",
+      "license": "Research use",
+      "sensor_type": "rf",
+      "drone_models": ["Multiple - testbed flights"],
+      "environment": "field",
+      "size_gb": null,
+      "format": "iq_csv",
+      "operational_gap": true,
+      "notes": "NSF wireless research platform at NC State. Real drone flights with LTE I/Q measurements, RF controller signals. Living lab data."
+    },
+    {
+      "id": "drone_detection_hf",
+      "name": "Drone Detection (HF)",
+      "source_url": "https://huggingface.co/datasets/pathikg/drone-detection-dataset",
+      "license": "MIT",
+      "sensor_type": "visual",
+      "drone_models": ["Various consumer drones"],
+      "environment": "field",
+      "size_gb": 4.65,
+      "format": "images_coco",
+      "operational_gap": true,
+      "notes": "54,071 images with COCO bounding boxes. Sourced from YouTube videos. 640x480 JPEG."
     }
   ]
 }

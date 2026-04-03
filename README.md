@@ -20,6 +20,9 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | KU Leuven Drone RF | Multiple | Lab | TBD | Unknown | [KU Leuven](https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/HZRVNZ) |
 | AirID | DJI Matrice M100 | Lab | TBD | Research | [GENESYS](https://genesys-lab.org/airid) |
 | Hovering UAVs RF | 7x DJI M100 | Lab | 4.5 GB | Research | [GENESYS](https://genesys-lab.org/hovering-uavs) |
+| OpenSky Network | ADS-B aircraft + some drones | Field | TB+ | CC BY-NC-SA 4.0 | [OpenSky](https://opensky-network.org/data/) |
+| TEXBAT | GPS spoofing scenarios | Lab | TBD | Research | [UT Austin](https://radionavlab.ae.utexas.edu/texbat/) |
+| AERPAW | Testbed flights | Field | TBD | Research | [AERPAW](https://aerpaw.org/experiments/datasets/) |
 
 ### Acoustic
 
@@ -51,6 +54,8 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | Det-Fly | UAV targets from DJI Mavic 2 | Field | TBD | Unknown | [GitHub](https://github.com/Jake-WU/Det-Fly) |
 | DUT Anti-UAV | 35 UAV types | Field | TBD | MIT | [GitHub](https://github.com/wangdongdut/DUT-Anti-UAV) |
 | Drone Dataset (UAV) | Mixed consumer drones | Field | TBD | Unknown | [Kaggle](https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav) |
+| Cranfield Synthetic | Synthetic models | Lab | TBD | CC BY 4.0 | [GitHub](https://github.com/mazqtpopx/cranfield-synthetic-drone-detection) |
+| Drone Detection (HF) | Various consumer drones | Field | 4.65 GB | MIT | [HuggingFace](https://huggingface.co/datasets/pathikg/drone-detection-dataset) |
 
 ### Multimodal
 
