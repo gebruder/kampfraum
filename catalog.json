@@ -6,7 +6,11 @@
       "source_url": "https://dx.doi.org/10.17632/f4c2b4n755.1",
       "license": "CC BY 4.0",
       "sensor_type": "rf",
-      "drone_models": ["Parrot Bebop", "Parrot AR", "DJI Phantom"],
+      "drone_models": [
+        "Parrot Bebop",
+        "Parrot AR",
+        "DJI Phantom"
+      ],
       "environment": "lab",
       "size_gb": 40,
       "format": "csv",
@@ -20,18 +24,42 @@
       "license": "Unknown",
       "sensor_type": "rf",
       "drone_models": [
-        "DJI Mavic Air 2", "DJI Mini 2", "DJI Phantom 4 Pro",
-        "DJI Inspire 2", "DJI Matrice 300", "DJI FPV",
-        "Autel EVO II", "Parrot Anafi", "Skydio 2",
-        "Yuneec Typhoon H", "FIMI X8 SE", "Hubsan Zino",
-        "Holy Stone HS720", "Potensic Dreamer", "Ruko F11",
-        "Snaptain SP7100", "Contixo F24 Pro", "EXO X7 Ranger",
-        "Bwine F7", "Syma X500", "SJRC F11 4K Pro",
-        "MJX Bugs 16 Pro", "Eachine EX5", "Walkera Vitus",
-        "Xiaomi FIMI A3", "ZLL SG906 Max", "Potensic Atom",
-        "Holy Stone HS175D", "Ryze Tello", "Cheerson CX-20",
-        "Hubsan H501S", "WLtoys Q333", "JJRC X12",
-        "Eachine E520S", "Visuo ZEN K1", "GoolRC SG907",
+        "DJI Mavic Air 2",
+        "DJI Mini 2",
+        "DJI Phantom 4 Pro",
+        "DJI Inspire 2",
+        "DJI Matrice 300",
+        "DJI FPV",
+        "Autel EVO II",
+        "Parrot Anafi",
+        "Skydio 2",
+        "Yuneec Typhoon H",
+        "FIMI X8 SE",
+        "Hubsan Zino",
+        "Holy Stone HS720",
+        "Potensic Dreamer",
+        "Ruko F11",
+        "Snaptain SP7100",
+        "Contixo F24 Pro",
+        "EXO X7 Ranger",
+        "Bwine F7",
+        "Syma X500",
+        "SJRC F11 4K Pro",
+        "MJX Bugs 16 Pro",
+        "Eachine EX5",
+        "Walkera Vitus",
+        "Xiaomi FIMI A3",
+        "ZLL SG906 Max",
+        "Potensic Atom",
+        "Holy Stone HS175D",
+        "Ryze Tello",
+        "Cheerson CX-20",
+        "Hubsan H501S",
+        "WLtoys Q333",
+        "JJRC X12",
+        "Eachine E520S",
+        "Visuo ZEN K1",
+        "GoolRC SG907",
         "KF102"
       ],
       "environment": "lab",
@@ -47,9 +75,13 @@
       "license": "CC BY 4.0",
       "sensor_type": "rf",
       "drone_models": [
-        "DJI Mavic Pro", "DJI Mavic Air", "DJI Phantom 4",
-        "DJI Inspire 1", "DJI Matrice 100",
-        "Parrot Disco", "Parrot Bebop 2"
+        "DJI Mavic Pro",
+        "DJI Mavic Air",
+        "DJI Phantom 4",
+        "DJI Inspire 1",
+        "DJI Matrice 100",
+        "Parrot Disco",
+        "Parrot Bebop 2"
       ],
       "environment": "lab",
       "size_gb": 3.5,
@@ -63,7 +95,9 @@
       "source_url": "https://zenodo.org/record/4264467",
       "license": "CC BY 4.0",
       "sensor_type": "multimodal",
-      "drone_models": ["DJI Phantom 4"],
+      "drone_models": [
+        "DJI Phantom 4"
+      ],
       "environment": "field",
       "size_gb": 2.1,
       "format": "csv_mp4",
@@ -76,7 +110,9 @@
       "source_url": "https://arxiv.org/abs/2509.04715",
       "license": "Unknown",
       "sensor_type": "acoustic",
-      "drone_models": ["32 categories - see paper for full list"],
+      "drone_models": [
+        "32 categories - see paper for full list"
+      ],
       "environment": "lab",
       "size_gb": null,
       "format": "spectrogram_mfcc",
@@ -89,7 +125,13 @@
       "source_url": "https://ieee-dataport.org/documents/cardinal-rf-cardrf-outdoor-uavuasdrone-rf-signals-bluetooth-and-wifi-signals-dataset",
       "license": "CC BY 4.0",
       "sensor_type": "rf",
-      "drone_models": ["Beebeerun", "DJI Inspire 1 Pro", "DJI Matrice 100", "DJI Phantom 4 Pro", "DJI Phantom 3"],
+      "drone_models": [
+        "Beebeerun",
+        "DJI Inspire 1 Pro",
+        "DJI Matrice 100",
+        "DJI Phantom 4 Pro",
+        "DJI Phantom 3"
+      ],
       "environment": "field",
       "size_gb": 65,
       "format": "mat",
@@ -102,7 +144,20 @@
       "source_url": "https://ieee-dataport.org/open-access/drone-remote-controller-rf-signal-dataset",
       "license": "CC BY 4.0",
       "sensor_type": "rf",
-      "drone_models": ["DJI Inspire 1 Pro", "DJI Matrice 100", "DJI Matrice 600", "DJI Phantom 4 Pro", "DJI Phantom 3", "Spektrum", "Futaba", "Graupner", "HobbyKing", "FlySky", "Turnigy", "Jeti Duplex"],
+      "drone_models": [
+        "DJI Inspire 1 Pro",
+        "DJI Matrice 100",
+        "DJI Matrice 600",
+        "DJI Phantom 4 Pro",
+        "DJI Phantom 3",
+        "Spektrum",
+        "Futaba",
+        "Graupner",
+        "HobbyKing",
+        "FlySky",
+        "Turnigy",
+        "Jeti Duplex"
+      ],
       "environment": "lab",
       "size_gb": 124,
       "format": "mat",
@@ -115,7 +170,15 @@
       "source_url": "https://ieee-dataport.org/documents/dronerfb-spectra-rf-spectrogram-dataset-drone-recognition",
       "license": "CC BY 4.0",
       "sensor_type": "rf",
-      "drone_models": ["DJI", "Vbar", "FrSky", "Futaba", "Taranis", "RadioLink", "Skydroid"],
+      "drone_models": [
+        "DJI",
+        "Vbar",
+        "FrSky",
+        "Futaba",
+        "Taranis",
+        "RadioLink",
+        "Skydroid"
+      ],
       "environment": "field",
       "size_gb": 5.5,
       "format": "npy",
@@ -128,7 +191,9 @@
       "source_url": "https://arxiv.org/abs/2601.03302",
       "license": "Unknown",
       "sensor_type": "rf",
-      "drone_models": ["23 commercial and hobbyist drone models - 39 classes"],
+      "drone_models": [
+        "23 commercial and hobbyist drone models - 39 classes"
+      ],
       "environment": "lab",
       "size_gb": 500,
       "format": "raw_iq",
@@ -141,7 +206,9 @@
       "source_url": "https://arxiv.org/abs/2603.00106",
       "license": "CC BY 4.0",
       "sensor_type": "rf",
-      "drone_models": ["26 UAV units spanning 8 models"],
+      "drone_models": [
+        "26 UAV units spanning 8 models"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "raw_iq",
@@ -154,9 +221,11 @@
       "source_url": "https://www.kaggle.com/datasets/sgluege/noisy-drone-rf-signal-classification-v2",
       "license": "Unknown",
       "sensor_type": "rf",
-      "drone_models": ["6 consumer drones"],
+      "drone_models": [
+        "6 consumer drones"
+      ],
       "environment": "lab",
-      "size_gb": null,
+      "size_gb": 125,
       "format": "pt",
       "operational_gap": true,
       "notes": "Spectrogram and IQ data at varying SNR levels. PyTorch format. V1 and V2 available on Kaggle."
@@ -167,9 +236,11 @@
       "source_url": "https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/HZRVNZ",
       "license": "Unknown",
       "sensor_type": "rf",
-      "drone_models": ["Multiple - see dataset"],
+      "drone_models": [
+        "Multiple - see dataset"
+      ],
       "environment": "lab",
-      "size_gb": null,
+      "size_gb": 43.5,
       "format": "mat",
       "operational_gap": true,
       "notes": "Semi-anechoic chamber. USRP X310 at 100 MSps, 2.44 GHz center frequency. Royal Military Academy."
@@ -180,7 +251,9 @@
       "source_url": "https://www.nature.com/articles/s41597-026-06802-6",
       "license": "Unknown",
       "sensor_type": "multimodal",
-      "drone_models": ["4 commercial drones + 1 non-drone"],
+      "drone_models": [
+        "4 commercial drones + 1 non-drone"
+      ],
       "environment": "lab",
       "size_gb": null,
       "format": "raw",
@@ -193,7 +266,9 @@
       "source_url": "https://genesys-lab.org/airid",
       "license": "Research use",
       "sensor_type": "rf",
-      "drone_models": ["DJI Matrice M100"],
+      "drone_models": [
+        "DJI Matrice M100"
+      ],
       "environment": "lab",
       "size_gb": null,
       "format": "sigmf_binary",
@@ -206,7 +281,9 @@
       "source_url": "https://genesys-lab.org/hovering-uavs",
       "license": "Research use",
       "sensor_type": "rf",
-      "drone_models": ["DJI Matrice M100 (x7)"],
+      "drone_models": [
+        "DJI Matrice M100 (x7)"
+      ],
       "environment": "lab",
       "size_gb": 4.5,
       "format": "sigmf",
@@ -219,9 +296,11 @@
       "source_url": "https://huggingface.co/datasets/geronimobasso/drone-audio-detection-samples",
       "license": "Unknown",
       "sensor_type": "acoustic",
-      "drone_models": ["Multiple - see dataset"],
+      "drone_models": [
+        "Multiple - see dataset"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 6.8,
       "format": "wav",
       "operational_gap": true,
       "notes": "Largest public drone audio database. 16 kHz, 16-bit mono. Designed for deep learning drone detection."
@@ -232,9 +311,11 @@
       "source_url": "https://huggingface.co/datasets/ahlab-drone-project/DroneAudioSet",
       "license": "MIT",
       "sensor_type": "acoustic",
-      "drone_models": ["Multiple types - various throttle levels"],
+      "drone_models": [
+        "Multiple types - various throttle levels"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 42.6,
       "format": "wav",
       "operational_gap": true,
       "notes": "23.5 hours annotated recordings. SNR range -57.2 to -2.5 dB. Drone-based search and rescue focus. NeurIPS 2025."
@@ -245,7 +326,9 @@
       "source_url": "https://dregon.inria.fr/datasets/dregon/",
       "license": "Research use",
       "sensor_type": "acoustic",
-      "drone_models": ["Quadrotor UAV"],
+      "drone_models": [
+        "Quadrotor UAV"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "wav",
@@ -258,7 +341,9 @@
       "source_url": "https://dregon.inria.fr/datasets/signal-processing-cup-2019/",
       "license": "Research use",
       "sensor_type": "acoustic",
-      "drone_models": ["Quadrotor UAV"],
+      "drone_models": [
+        "Quadrotor UAV"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "wav",
@@ -271,9 +356,11 @@
       "source_url": "https://zenodo.org/records/15391924",
       "license": "Unknown",
       "sensor_type": "acoustic",
-      "drone_models": ["Multiple UAV types"],
+      "drone_models": [
+        "Multiple UAV types"
+      ],
       "environment": "lab",
-      "size_gb": null,
+      "size_gb": 13.8,
       "format": "wav",
       "operational_gap": true,
       "notes": "8-channel microphone array at 96 kHz / 32-bit. Sound source localization. Varying distance, altitude, azimuth."
@@ -284,7 +371,9 @@
       "source_url": "https://github.com/saraalemadi/DroneAudioDataset",
       "license": "Unknown",
       "sensor_type": "acoustic",
-      "drone_models": ["Drone propellers - indoor"],
+      "drone_models": [
+        "Drone propellers - indoor"
+      ],
       "environment": "lab",
       "size_gb": null,
       "format": "wav",
@@ -297,7 +386,9 @@
       "source_url": "https://github.com/DroneDetectionThesis/Drone-detection-dataset",
       "license": "CC0 1.0",
       "sensor_type": "multimodal",
-      "drone_models": ["Drones, birds, airplanes, helicopters"],
+      "drone_models": [
+        "Drones, birds, airplanes, helicopters"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "mp4_wav_mat",
@@ -310,7 +401,9 @@
       "source_url": "https://github.com/ZhaoJ9014/Anti-UAV",
       "license": "Research use",
       "sensor_type": "visual",
-      "drone_models": ["Multiple UAV types"],
+      "drone_models": [
+        "Multiple UAV types"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "video_bbox",
@@ -323,9 +416,11 @@
       "source_url": "https://github.com/HwangBo94/Anti-UAV410",
       "license": "Research use",
       "sensor_type": "visual",
-      "drone_models": ["Multiple UAV types"],
+      "drone_models": [
+        "Multiple UAV types"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 10.1,
       "format": "video_bbox",
       "operational_gap": true,
       "notes": "410 thermal IR videos, 438K+ annotated bounding boxes. Drone tracking in the wild."
@@ -336,7 +431,9 @@
       "source_url": "https://arxiv.org/abs/2507.23473",
       "license": "Unknown",
       "sensor_type": "visual",
-      "drone_models": ["Tiny UAVs"],
+      "drone_models": [
+        "Tiny UAVs"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "video_bbox",
@@ -349,9 +446,11 @@
       "source_url": "https://www.kaggle.com/datasets/pandrii000/hituav-a-highaltitude-infrared-thermal-dataset",
       "license": "CC BY 4.0",
       "sensor_type": "visual",
-      "drone_models": ["UAV-mounted camera - detects persons/vehicles"],
+      "drone_models": [
+        "UAV-mounted camera - detects persons/vehicles"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 0.2,
       "format": "images_bbox",
       "operational_gap": true,
       "notes": "2,898 infrared thermal images from 43,470 frames. High-altitude UAV thermal object detection."
@@ -362,9 +461,16 @@
       "source_url": "https://ieee-dataport.org/documents/visiodect-dataset-aerial-dataset-scenario-based-multi-drone-detection-and-identification",
       "license": "Unknown",
       "sensor_type": "visual",
-      "drone_models": ["Anafi-Extended", "DJI FPV", "DJI Phantom", "EFT-E410S", "Mavic Air 2", "Mavic 2 Enterprise"],
+      "drone_models": [
+        "Anafi-Extended",
+        "DJI FPV",
+        "DJI Phantom",
+        "EFT-E410S",
+        "Mavic Air 2",
+        "Mavic 2 Enterprise"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 1.9,
       "format": "images_bbox",
       "operational_gap": true,
       "notes": "20,924 annotated images. 6 UAV models. Sunny/cloudy/evening. 12 locations in South Korea over 20 months."
@@ -375,7 +481,9 @@
       "source_url": "https://zenodo.org/records/13360116",
       "license": "Unknown",
       "sensor_type": "visual",
-      "drone_models": ["Multiple synthetic drone models"],
+      "drone_models": [
+        "Multiple synthetic drone models"
+      ],
       "environment": "lab",
       "size_gb": 900,
       "format": "images_yolo",
@@ -388,9 +496,11 @@
       "source_url": "https://huggingface.co/datasets/lgrzybowski/seraphim-drone-detection-dataset",
       "license": "CC BY 4.0",
       "sensor_type": "visual",
-      "drone_models": ["Multiple - merged from 23 source datasets"],
+      "drone_models": [
+        "Multiple - merged from 23 source datasets"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 10,
       "format": "images_bbox",
       "operational_gap": true,
       "notes": "268,957 images merged from 23 datasets. Deduplicated. 640x640. Real + synthetic + marketing images."
@@ -401,7 +511,9 @@
       "source_url": "https://data.mendeley.com/datasets/6ghdz52pd7/3",
       "license": "CC BY 4.0",
       "sensor_type": "visual",
-      "drone_models": ["Multiple drones and birds"],
+      "drone_models": [
+        "Multiple drones and birds"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "images_yolo",
@@ -414,7 +526,9 @@
       "source_url": "https://github.com/wosdetc/challenge",
       "license": "Research use",
       "sensor_type": "visual",
-      "drone_models": ["Multiple drones and birds"],
+      "drone_models": [
+        "Multiple drones and birds"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "video_bbox",
@@ -427,9 +541,11 @@
       "source_url": "https://github.com/VisDrone/VisDrone-Dataset",
       "license": "Research use",
       "sensor_type": "visual",
-      "drone_models": ["UAV-mounted camera - detects pedestrians, vehicles, bicycles"],
+      "drone_models": [
+        "UAV-mounted camera - detects pedestrians, vehicles, bicycles"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 2.3,
       "format": "images_video_bbox",
       "operational_gap": true,
       "notes": "288 video clips, 261,908 frames, 10,209 images. 2.6M bounding boxes. 14 cities. Aerial object detection benchmark."
@@ -440,7 +556,9 @@
       "source_url": "https://www.mdpi.com/2504-446X/9/10/694",
       "license": "Unknown",
       "sensor_type": "multimodal",
-      "drone_models": ["Drone-to-drone targets"],
+      "drone_models": [
+        "Drone-to-drone targets"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "images_bbox",
@@ -453,7 +571,9 @@
       "source_url": "https://www.nature.com/articles/s41597-025-06204-0",
       "license": "Unknown",
       "sensor_type": "multimodal",
-      "drone_models": ["Dual UAV - detects vehicles"],
+      "drone_models": [
+        "Dual UAV - detects vehicles"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "images_bbox",
@@ -466,7 +586,9 @@
       "source_url": "https://www.mdpi.com/2072-4292/14/11/2601",
       "license": "Unknown",
       "sensor_type": "visual",
-      "drone_models": ["19+ UAV types in swarms"],
+      "drone_models": [
+        "19+ UAV types in swarms"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "images_bbox",
@@ -479,7 +601,9 @@
       "source_url": "https://ieee-dataport.org/documents/cyber-physical-dataset-drone-swarms-coordinated-formations",
       "license": "Unknown",
       "sensor_type": "multimodal",
-      "drone_models": ["Swarm UAVs"],
+      "drone_models": [
+        "Swarm UAVs"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "csv_logs",
@@ -492,7 +616,9 @@
       "source_url": "https://github.com/sijieaaa/UAVScenes",
       "license": "Unknown",
       "sensor_type": "multimodal",
-      "drone_models": ["UAV-mounted - LiDAR + camera"],
+      "drone_models": [
+        "UAV-mounted - LiDAR + camera"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "pointcloud_images",
@@ -505,9 +631,11 @@
       "source_url": "https://github.com/Jake-WU/Det-Fly",
       "license": "Unknown",
       "sensor_type": "visual",
-      "drone_models": ["UAV targets from DJI Mavic 2"],
+      "drone_models": [
+        "UAV targets from DJI Mavic 2"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 25,
       "format": "images_bbox",
       "operational_gap": true,
       "notes": "13,000+ images. Drone-to-drone detection. Sky/urban/field/mountain backgrounds. Front/top/bottom views."
@@ -518,9 +646,11 @@
       "source_url": "https://github.com/wangdongdut/DUT-Anti-UAV",
       "license": "MIT",
       "sensor_type": "visual",
-      "drone_models": ["35 UAV types"],
+      "drone_models": [
+        "35 UAV types"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 5,
       "format": "images_video_bbox",
       "operational_gap": true,
       "notes": "Detection + tracking subsets. 35 UAV types. Sky/jungle/urban/farmland. Day/night/dawn/dusk. Sunny/cloudy/snowy."
@@ -531,9 +661,11 @@
       "source_url": "https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav",
       "license": "Unknown",
       "sensor_type": "visual",
-      "drone_models": ["Mixed consumer drones"],
+      "drone_models": [
+        "Mixed consumer drones"
+      ],
       "environment": "field",
-      "size_gb": null,
+      "size_gb": 0.75,
       "format": "images_yolo",
       "operational_gap": true,
       "notes": "3,000+ images with YOLO annotations. Various environmental conditions and camera perspectives."
@@ -544,7 +676,9 @@
       "source_url": "https://opensky-network.org/data/",
       "license": "CC BY-NC-SA 4.0",
       "sensor_type": "rf",
-      "drone_models": ["ADS-B equipped aircraft and some drones"],
+      "drone_models": [
+        "ADS-B equipped aircraft and some drones"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "csv_sql",
@@ -557,7 +691,9 @@
       "source_url": "https://radionavlab.ae.utexas.edu/texbat/",
       "license": "Research use",
       "sensor_type": "rf",
-      "drone_models": ["GPS spoofing scenarios - not drone-specific"],
+      "drone_models": [
+        "GPS spoofing scenarios - not drone-specific"
+      ],
       "environment": "lab",
       "size_gb": null,
       "format": "bin",
@@ -570,7 +706,9 @@
       "source_url": "https://github.com/mazqtpopx/cranfield-synthetic-drone-detection",
       "license": "CC BY 4.0",
       "sensor_type": "visual",
-      "drone_models": ["Synthetic drone models"],
+      "drone_models": [
+        "Synthetic drone models"
+      ],
       "environment": "lab",
       "size_gb": null,
       "format": "images_masks",
@@ -583,7 +721,9 @@
       "source_url": "https://aerpaw.org/experiments/datasets/",
       "license": "Research use",
       "sensor_type": "rf",
-      "drone_models": ["Multiple - testbed flights"],
+      "drone_models": [
+        "Multiple - testbed flights"
+      ],
       "environment": "field",
       "size_gb": null,
       "format": "iq_csv",
@@ -596,7 +736,9 @@
       "source_url": "https://huggingface.co/datasets/pathikg/drone-detection-dataset",
       "license": "MIT",
       "sensor_type": "visual",
-      "drone_models": ["Various consumer drones"],
+      "drone_models": [
+        "Various consumer drones"
+      ],
       "environment": "field",
       "size_gb": 4.65,
       "format": "images_coco",

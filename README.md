@@ -16,8 +16,8 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | DroneRFb-Spectra | 7 brands (DJI, FrSky, Futaba...) | Field | 5.5 GB | CC BY 4.0 | [IEEE](https://ieee-dataport.org/documents/dronerfb-spectra-rf-spectrogram-dataset-drone-recognition) |
 | CageDroneRF | 23 models, 39 classes | Lab | 500 GB | Unknown | [arXiv](https://arxiv.org/abs/2601.03302) |
 | DRFF-R2 | 26 units, 8 models | Field | TBD | CC BY 4.0 | [arXiv](https://arxiv.org/abs/2603.00106) |
-| Noisy Drone RF | 6 consumer drones | Lab | TBD | Unknown | [Kaggle](https://www.kaggle.com/datasets/sgluege/noisy-drone-rf-signal-classification-v2) |
-| KU Leuven Drone RF | Multiple | Lab | TBD | Unknown | [KU Leuven](https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/HZRVNZ) |
+| Noisy Drone RF | 6 consumer drones | Lab | 125 GB | Unknown | [Kaggle](https://www.kaggle.com/datasets/sgluege/noisy-drone-rf-signal-classification-v2) |
+| KU Leuven Drone RF | Multiple | Lab | 43.5 GB | Unknown | [KU Leuven](https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/HZRVNZ) |
 | AirID | DJI Matrice M100 | Lab | TBD | Research | [GENESYS](https://genesys-lab.org/airid) |
 | Hovering UAVs RF | 7x DJI M100 | Lab | 4.5 GB | Research | [GENESYS](https://genesys-lab.org/hovering-uavs) |
 | OpenSky Network | ADS-B aircraft + some drones | Field | TB+ | CC BY-NC-SA 4.0 | [OpenSky](https://opensky-network.org/data/) |
@@ -29,11 +29,11 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | Dataset | Drone Models | Environment | Size | License | Source |
 |---------|-------------|-------------|------|---------|--------|
 | Acoustic Multiclass | 32 categories | Lab | TBD | Unknown | [arXiv](https://arxiv.org/abs/2509.04715) |
-| Drone Audio Detection Samples | Multiple | Field | TBD | Unknown | [HuggingFace](https://huggingface.co/datasets/geronimobasso/drone-audio-detection-samples) |
-| DroneAudioset | Multiple types/throttles | Field | TBD | MIT | [HuggingFace](https://huggingface.co/datasets/ahlab-drone-project/DroneAudioSet) |
+| Drone Audio Detection Samples | Multiple | Field | 6.8 GB | Unknown | [HuggingFace](https://huggingface.co/datasets/geronimobasso/drone-audio-detection-samples) |
+| DroneAudioset | Multiple types/throttles | Field | 42.6 GB | MIT | [HuggingFace](https://huggingface.co/datasets/ahlab-drone-project/DroneAudioSet) |
 | DREGON | Quadrotor | Field | TBD | Research | [Inria](https://dregon.inria.fr/datasets/dregon/) |
 | SPCup19 Egonoise | Quadrotor | Field | TBD | Research | [Inria](https://dregon.inria.fr/datasets/signal-processing-cup-2019/) |
-| UaVirBASE | Multiple UAVs | Lab | TBD | Unknown | [Zenodo](https://zenodo.org/records/15391924) |
+| UaVirBASE | Multiple UAVs | Lab | 13.8 GB | Unknown | [Zenodo](https://zenodo.org/records/15391924) |
 | DroneAudioDataset | Propellers (indoor) | Lab | TBD | Unknown | [GitHub](https://github.com/saraalemadi/DroneAudioDataset) |
 
 ### Visual
@@ -41,19 +41,19 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | Dataset | Drone Models | Environment | Size | License | Source |
 |---------|-------------|-------------|------|---------|--------|
 | Anti-UAV | Multiple | Field | TBD | Research | [GitHub](https://github.com/ZhaoJ9014/Anti-UAV) |
-| Anti-UAV410 | Multiple | Field | TBD | Research | [GitHub](https://github.com/HwangBo94/Anti-UAV410) |
+| Anti-UAV410 | Multiple | Field | 10.1 GB | Research | [GitHub](https://github.com/HwangBo94/Anti-UAV410) |
 | CST Anti-UAV | Tiny UAVs | Field | TBD | Unknown | [arXiv](https://arxiv.org/abs/2507.23473) |
-| HIT-UAV | Thermal IR (persons/vehicles) | Field | TBD | CC BY 4.0 | [Kaggle](https://www.kaggle.com/datasets/pandrii000/hituav-a-highaltitude-infrared-thermal-dataset) |
-| VisioDECT | 6 UAV models | Field | TBD | Unknown | [IEEE](https://ieee-dataport.org/documents/visiodect-dataset-aerial-dataset-scenario-based-multi-drone-detection-and-identification) |
+| HIT-UAV | Thermal IR (persons/vehicles) | Field | 0.2 GB | CC BY 4.0 | [Kaggle](https://www.kaggle.com/datasets/pandrii000/hituav-a-highaltitude-infrared-thermal-dataset) |
+| VisioDECT | 6 UAV models | Field | 1.9 GB | Unknown | [IEEE](https://ieee-dataport.org/documents/visiodect-dataset-aerial-dataset-scenario-based-multi-drone-detection-and-identification) |
 | SynDroneVision | Synthetic models | Lab | 900 GB | Unknown | [Zenodo](https://zenodo.org/records/13360116) |
-| Seraphim | 23 merged source datasets | Field | TBD | CC BY 4.0 | [HuggingFace](https://huggingface.co/datasets/lgrzybowski/seraphim-drone-detection-dataset) |
+| Seraphim | 23 merged source datasets | Field | 10 GB | CC BY 4.0 | [HuggingFace](https://huggingface.co/datasets/lgrzybowski/seraphim-drone-detection-dataset) |
 | Drone vs Bird (YOLO) | Drones + birds | Field | TBD | CC BY 4.0 | [Mendeley](https://data.mendeley.com/datasets/6ghdz52pd7/3) |
 | Drone vs Bird Challenge | Drones + birds | Field | TBD | Research | [GitHub](https://github.com/wosdetc/challenge) |
-| VisDrone | Aerial (pedestrians, vehicles) | Field | TBD | Research | [GitHub](https://github.com/VisDrone/VisDrone-Dataset) |
+| VisDrone | Aerial (pedestrians, vehicles) | Field | 2.3 GB | Research | [GitHub](https://github.com/VisDrone/VisDrone-Dataset) |
 | UAVSwarm | 19+ types in swarms | Field | TBD | Unknown | [MDPI](https://www.mdpi.com/2072-4292/14/11/2601) |
-| Det-Fly | UAV targets from DJI Mavic 2 | Field | TBD | Unknown | [GitHub](https://github.com/Jake-WU/Det-Fly) |
-| DUT Anti-UAV | 35 UAV types | Field | TBD | MIT | [GitHub](https://github.com/wangdongdut/DUT-Anti-UAV) |
-| Drone Dataset (UAV) | Mixed consumer drones | Field | TBD | Unknown | [Kaggle](https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav) |
+| Det-Fly | UAV targets from DJI Mavic 2 | Field | 25 GB | Unknown | [GitHub](https://github.com/Jake-WU/Det-Fly) |
+| DUT Anti-UAV | 35 UAV types | Field | 5 GB | MIT | [GitHub](https://github.com/wangdongdut/DUT-Anti-UAV) |
+| Drone Dataset (UAV) | Mixed consumer drones | Field | 0.75 GB | Unknown | [Kaggle](https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav) |
 | Cranfield Synthetic | Synthetic models | Lab | TBD | CC BY 4.0 | [GitHub](https://github.com/mazqtpopx/cranfield-synthetic-drone-detection) |
 | Drone Detection (HF) | Various consumer drones | Field | 4.65 GB | MIT | [HuggingFace](https://huggingface.co/datasets/pathikg/drone-detection-dataset) |
 
