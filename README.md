@@ -15,46 +15,46 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | Drone RC RF Signals | 17 RCs, 8 manufacturers | Lab | 124 GB | CC BY 4.0 | [IEEE](https://ieee-dataport.org/open-access/drone-remote-controller-rf-signal-dataset) |
 | DroneRFb-Spectra | 7 brands (DJI, FrSky, Futaba...) | Field | 5.5 GB | CC BY 4.0 | [IEEE](https://ieee-dataport.org/documents/dronerfb-spectra-rf-spectrogram-dataset-drone-recognition) |
 | CageDroneRF | 23 models, 39 classes | Lab | 500 GB | Unknown | [arXiv](https://arxiv.org/abs/2601.03302) |
-| DRFF-R2 | 26 units, 8 models | Field | TBD | CC BY 4.0 | [arXiv](https://arxiv.org/abs/2603.00106) |
+| DRFF-R2 | 26 units, 8 models | Field | Unknown | CC BY 4.0 | [arXiv](https://arxiv.org/abs/2603.00106) |
 | Noisy Drone RF | 6 consumer drones | Lab | 125 GB | Unknown | [Kaggle](https://www.kaggle.com/datasets/sgluege/noisy-drone-rf-signal-classification-v2) |
 | KU Leuven Drone RF | Multiple | Lab | 43.5 GB | Unknown | [KU Leuven](https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/HZRVNZ) |
-| AirID | DJI Matrice M100 | Lab | TBD | Research | [GENESYS](https://genesys-lab.org/airid) |
+| AirID | DJI Matrice M100 | Lab | Unknown | Research | [GENESYS](https://genesys-lab.org/airid) |
 | Hovering UAVs RF | 7x DJI M100 | Lab | 4.5 GB | Research | [GENESYS](https://genesys-lab.org/hovering-uavs) |
 | OpenSky Network | ADS-B aircraft + some drones | Field | TB+ | CC BY-NC-SA 4.0 | [OpenSky](https://opensky-network.org/data/) |
-| TEXBAT | GPS spoofing scenarios | Lab | TBD | Research | [UT Austin](https://radionavlab.ae.utexas.edu/texbat/) |
-| AERPAW | Testbed flights | Field | TBD | Research | [AERPAW](https://aerpaw.org/experiments/datasets/) |
+| TEXBAT | GPS spoofing scenarios | Lab | Unknown | Research | [UT Austin](https://radionavlab.ae.utexas.edu/texbat/) |
+| AERPAW | Testbed flights | Field | Unknown | Research | [AERPAW](https://aerpaw.org/experiments/datasets/) |
 
 ### Acoustic
 
 | Dataset | Drone Models | Environment | Size | License | Source |
 |---------|-------------|-------------|------|---------|--------|
-| Acoustic Multiclass | 32 categories | Lab | TBD | Unknown | [arXiv](https://arxiv.org/abs/2509.04715) |
+| Acoustic Multiclass | 32 categories | Lab | Unknown | Unknown | [arXiv](https://arxiv.org/abs/2509.04715) |
 | Drone Audio Detection Samples | Multiple | Field | 6.8 GB | Unknown | [HuggingFace](https://huggingface.co/datasets/geronimobasso/drone-audio-detection-samples) |
 | DroneAudioset | Multiple types/throttles | Field | 42.6 GB | MIT | [HuggingFace](https://huggingface.co/datasets/ahlab-drone-project/DroneAudioSet) |
-| DREGON | Quadrotor | Field | TBD | Research | [Inria](https://dregon.inria.fr/datasets/dregon/) |
-| SPCup19 Egonoise | Quadrotor | Field | TBD | Research | [Inria](https://dregon.inria.fr/datasets/signal-processing-cup-2019/) |
+| DREGON | Quadrotor | Field | Unknown | Research | [Inria](https://dregon.inria.fr/datasets/dregon/) |
+| SPCup19 Egonoise | Quadrotor | Field | Unknown | Research | [Inria](https://dregon.inria.fr/datasets/signal-processing-cup-2019/) |
 | UaVirBASE | Multiple UAVs | Lab | 13.8 GB | Unknown | [Zenodo](https://zenodo.org/records/15391924) |
-| DroneAudioDataset | Propellers (indoor) | Lab | TBD | Unknown | [GitHub](https://github.com/saraalemadi/DroneAudioDataset) |
+| DroneAudioDataset | Propellers (indoor) | Lab | Unknown | Unknown | [GitHub](https://github.com/saraalemadi/DroneAudioDataset) |
 
 ### Visual
 
 | Dataset | Drone Models | Environment | Size | License | Source |
 |---------|-------------|-------------|------|---------|--------|
-| Anti-UAV | Multiple | Field | TBD | Research | [GitHub](https://github.com/ZhaoJ9014/Anti-UAV) |
+| Anti-UAV | Multiple | Field | Unknown | Research | [GitHub](https://github.com/ZhaoJ9014/Anti-UAV) |
 | Anti-UAV410 | Multiple | Field | 10.1 GB | Research | [GitHub](https://github.com/HwangBo94/Anti-UAV410) |
-| CST Anti-UAV | Tiny UAVs | Field | TBD | Unknown | [arXiv](https://arxiv.org/abs/2507.23473) |
+| CST Anti-UAV | Tiny UAVs | Field | Unknown | Unknown | [arXiv](https://arxiv.org/abs/2507.23473) |
 | HIT-UAV | Thermal IR (persons/vehicles) | Field | 0.2 GB | CC BY 4.0 | [Kaggle](https://www.kaggle.com/datasets/pandrii000/hituav-a-highaltitude-infrared-thermal-dataset) |
 | VisioDECT | 6 UAV models | Field | 1.9 GB | Unknown | [IEEE](https://ieee-dataport.org/documents/visiodect-dataset-aerial-dataset-scenario-based-multi-drone-detection-and-identification) |
 | SynDroneVision | Synthetic models | Lab | 900 GB | Unknown | [Zenodo](https://zenodo.org/records/13360116) |
 | Seraphim | 23 merged source datasets | Field | 10 GB | CC BY 4.0 | [HuggingFace](https://huggingface.co/datasets/lgrzybowski/seraphim-drone-detection-dataset) |
-| Drone vs Bird (YOLO) | Drones + birds | Field | TBD | CC BY 4.0 | [Mendeley](https://data.mendeley.com/datasets/6ghdz52pd7/3) |
-| Drone vs Bird Challenge | Drones + birds | Field | TBD | Research | [GitHub](https://github.com/wosdetc/challenge) |
+| Drone vs Bird (YOLO) | Drones + birds | Field | Unknown | CC BY 4.0 | [Mendeley](https://data.mendeley.com/datasets/6ghdz52pd7/3) |
+| Drone vs Bird Challenge | Drones + birds | Field | Unknown | Research | [GitHub](https://github.com/wosdetc/challenge) |
 | VisDrone | Aerial (pedestrians, vehicles) | Field | 2.3 GB | Research | [GitHub](https://github.com/VisDrone/VisDrone-Dataset) |
-| UAVSwarm | 19+ types in swarms | Field | TBD | Unknown | [MDPI](https://www.mdpi.com/2072-4292/14/11/2601) |
+| UAVSwarm | 19+ types in swarms | Field | Unknown | Unknown | [MDPI](https://www.mdpi.com/2072-4292/14/11/2601) |
 | Det-Fly | UAV targets from DJI Mavic 2 | Field | 25 GB | Unknown | [GitHub](https://github.com/Jake-WU/Det-Fly) |
 | DUT Anti-UAV | 35 UAV types | Field | 5 GB | MIT | [GitHub](https://github.com/wangdongdut/DUT-Anti-UAV) |
 | Drone Dataset (UAV) | Mixed consumer drones | Field | 0.75 GB | Unknown | [Kaggle](https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav) |
-| Cranfield Synthetic | Synthetic models | Lab | TBD | CC BY 4.0 | [GitHub](https://github.com/mazqtpopx/cranfield-synthetic-drone-detection) |
+| Cranfield Synthetic | Synthetic models | Lab | Unknown | CC BY 4.0 | [GitHub](https://github.com/mazqtpopx/cranfield-synthetic-drone-detection) |
 | Drone Detection (HF) | Various consumer drones | Field | 4.65 GB | MIT | [HuggingFace](https://huggingface.co/datasets/pathikg/drone-detection-dataset) |
 
 ### Multimodal
@@ -62,12 +62,12 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | Dataset | Sensor Types | Environment | Size | License | Source |
 |---------|-------------|-------------|------|---------|--------|
 | Zenodo RF/Video | RF + video | Field | 2.1 GB | CC BY 4.0 | [Zenodo](https://zenodo.org/record/4264467) |
-| Multi-Sensor IR/Visible/Audio | IR + visible + audio | Field | TBD | CC0 1.0 | [GitHub](https://github.com/DroneDetectionThesis/Drone-detection-dataset) |
-| Multi-Sensor Radar/RF | FMCW + CW radar + RF | Lab | TBD | Unknown | [Nature](https://www.nature.com/articles/s41597-026-06802-6) |
-| TMRGBT-D2D | RGB + thermal | Field | TBD | Unknown | [MDPI](https://www.mdpi.com/2504-446X/9/10/694) |
-| M3OT | RGB + IR | Field | TBD | Unknown | [Nature](https://www.nature.com/articles/s41597-025-06204-0) |
-| Cyber-Physical Swarm | Network + telemetry | Field | TBD | Unknown | [IEEE](https://ieee-dataport.org/documents/cyber-physical-dataset-drone-swarms-coordinated-formations) |
-| UAVScenes | LiDAR + camera | Field | TBD | Unknown | [GitHub](https://github.com/sijieaaa/UAVScenes) |
+| Multi-Sensor IR/Visible/Audio | IR + visible + audio | Field | Unknown | CC0 1.0 | [GitHub](https://github.com/DroneDetectionThesis/Drone-detection-dataset) |
+| Multi-Sensor Radar/RF | FMCW + CW radar + RF | Lab | Unknown | Unknown | [Nature](https://www.nature.com/articles/s41597-026-06802-6) |
+| TMRGBT-D2D | RGB + thermal | Field | Unknown | Unknown | [MDPI](https://www.mdpi.com/2504-446X/9/10/694) |
+| M3OT | RGB + IR | Field | Unknown | Unknown | [Nature](https://www.nature.com/articles/s41597-025-06204-0) |
+| Cyber-Physical Swarm | Network + telemetry | Field | Unknown | Unknown | [IEEE](https://ieee-dataport.org/documents/cyber-physical-dataset-drone-swarms-coordinated-formations) |
+| UAVScenes | LiDAR + camera | Field | Unknown | Unknown | [GitHub](https://github.com/sijieaaa/UAVScenes) |
 
 ## Normalized Schema
 

@@ -369,7 +369,7 @@
                         </td>
                         <td class="cell-models" x-text="ds.drone_models.join(', ')"></td>
                         <td class="cell-secondary" x-text="ds.environment"></td>
-                        <td class="cell-secondary" x-text="ds.size_gb ? ds.size_gb + ' GB' : 'TBD'"></td>
+                        <td class="cell-secondary" x-text="ds.size_gb ? ds.size_gb + ' GB' : 'Unknown'"></td>
                         <td class="cell-secondary" x-text="ds.license"></td>
                         <td>
                             <a :href="ds.source_url" target="_blank" rel="noopener">Link</a>
