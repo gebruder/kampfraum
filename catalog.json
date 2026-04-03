@@ -498,6 +498,45 @@
       "format": "pointcloud_images",
       "operational_gap": true,
       "notes": "120K+ frames with semantic annotations for LiDAR and camera. 4 large scenes. ICCV 2025."
+    },
+    {
+      "id": "det_fly",
+      "name": "Det-Fly",
+      "source_url": "https://github.com/Jake-WU/Det-Fly",
+      "license": "Unknown",
+      "sensor_type": "visual",
+      "drone_models": ["UAV targets from DJI Mavic 2"],
+      "environment": "field",
+      "size_gb": null,
+      "format": "images_bbox",
+      "operational_gap": true,
+      "notes": "13,000+ images. Drone-to-drone detection. Sky/urban/field/mountain backgrounds. Front/top/bottom views."
+    },
+    {
+      "id": "dut_anti_uav",
+      "name": "DUT Anti-UAV",
+      "source_url": "https://github.com/wangdongdut/DUT-Anti-UAV",
+      "license": "MIT",
+      "sensor_type": "visual",
+      "drone_models": ["35 UAV types"],
+      "environment": "field",
+      "size_gb": null,
+      "format": "images_video_bbox",
+      "operational_gap": true,
+      "notes": "Detection + tracking subsets. 35 UAV types. Sky/jungle/urban/farmland. Day/night/dawn/dusk. Sunny/cloudy/snowy."
+    },
+    {
+      "id": "drone_dataset_uav_kaggle",
+      "name": "Drone Dataset (UAV)",
+      "source_url": "https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav",
+      "license": "Unknown",
+      "sensor_type": "visual",
+      "drone_models": ["Mixed consumer drones"],
+      "environment": "field",
+      "size_gb": null,
+      "format": "images_yolo",
+      "operational_gap": true,
+      "notes": "3,000+ images with YOLO annotations. Various environmental conditions and camera perspectives."
     }
   ]
 }

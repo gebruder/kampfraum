@@ -48,6 +48,9 @@ Open drone detection dataset aggregator. Kampfraum indexes every publicly availa
 | Drone vs Bird Challenge | Drones + birds | Field | TBD | Research | [GitHub](https://github.com/wosdetc/challenge) |
 | VisDrone | Aerial (pedestrians, vehicles) | Field | TBD | Research | [GitHub](https://github.com/VisDrone/VisDrone-Dataset) |
 | UAVSwarm | 19+ types in swarms | Field | TBD | Unknown | [MDPI](https://www.mdpi.com/2072-4292/14/11/2601) |
+| Det-Fly | UAV targets from DJI Mavic 2 | Field | TBD | Unknown | [GitHub](https://github.com/Jake-WU/Det-Fly) |
+| DUT Anti-UAV | 35 UAV types | Field | TBD | MIT | [GitHub](https://github.com/wangdongdut/DUT-Anti-UAV) |
+| Drone Dataset (UAV) | Mixed consumer drones | Field | TBD | Unknown | [Kaggle](https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav) |
 
 ### Multimodal
 
