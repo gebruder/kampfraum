@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# fetch_rfuav.sh — Clone/download RFUAV dataset
+# fetch_rfuav.sh - Clone/download RFUAV dataset
 # Source: https://github.com/kitoweeknd/RFUAV
 # Size: ~1.3TB, 37 UAV types, variable SNR, USRP-collected
 
@@ -24,7 +24,7 @@ fi
 # Check for external data pointers (README instructions, download links)
 if [ -f "${DEST}/README.md" ]; then
     echo ""
-    echo "=== RFUAV README — check for additional download instructions ==="
+    echo "=== RFUAV README - check for additional download instructions ==="
     # Extract any URLs pointing to external data
     grep -iE '(download|data|drive\.google|mega\.nz|zenodo|kaggle|dropbox|onedrive)' "${DEST}/README.md" || true
     echo "=== end ==="

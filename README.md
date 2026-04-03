@@ -1,6 +1,6 @@
 # Kampfraum
 
-Open drone detection dataset aggregator. Kampfraum indexes every publicly available drone detection dataset — RF, acoustic, multimodal — normalizes them into a common schema, and serves a dashboard that makes the data explorable without downloading anything. The repo name is the German military doctrine term for battlespace. The project is open. The gap it documents is the business.
+Open drone detection dataset aggregator. Kampfraum indexes every publicly available drone detection dataset (RF, acoustic, multimodal), normalizes them into a common schema, and serves a dashboard that makes the data explorable without downloading anything. The repo name is the German military doctrine term for battlespace. The project is open. The gap it documents is the business.
 
 ## Datasets
 

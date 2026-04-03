@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampfraum — Open Drone Detection Dataset Aggregator</title>
+    <title>Kampfraum - Open Drone Detection Dataset Aggregator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -113,7 +113,7 @@
     <section class="px-6 py-8 border-t border-zinc-800">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-xl font-semibold mb-4">Coverage Grid</h2>
-            <p class="text-zinc-500 text-sm mb-4">Drone models (rows) × datasets (columns). Cells show sensor types present.</p>
+            <p class="text-zinc-500 text-sm mb-4">Drone models (rows) x datasets (columns). Cells show sensor types present.</p>
             <div class="overflow-x-auto">
                 <table class="text-xs">
                     <thead>
@@ -135,7 +135,7 @@
                                               :class="sensorColor(ds.sensor_type)"
                                               x-text="ds.sensor_type"></span>
                                         <span x-show="!ds.drone_models.includes(model)"
-                                              class="text-zinc-800">—</span>
+                                              class="text-zinc-800">-</span>
                                     </td>
                                 </template>
                             </tr>
@@ -149,7 +149,7 @@
     <!-- Footer -->
     <footer class="border-t border-zinc-800 px-6 py-8 mt-8">
         <div class="max-w-6xl mx-auto text-center text-zinc-500 text-sm">
-            <p>Gebrüder Ottenheimer &mdash; <a href="https://gebruder.ottenheimer.app" class="underline hover:text-zinc-300">gebruder.ottenheimer.app</a></p>
+            <p>Gebrüder Ottenheimer - <a href="https://gebruder.ottenheimer.app" class="underline hover:text-zinc-300">gebruder.ottenheimer.app</a></p>
         </div>
     </footer>
 

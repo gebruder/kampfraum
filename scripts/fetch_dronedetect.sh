@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# fetch_dronedetect.sh — Download DroneDetect dataset from IEEE DataPort
+# fetch_dronedetect.sh - Download DroneDetect dataset from IEEE DataPort
 # Source: https://ieee-dataport.org/open-access/dronedetect-dataset-radio-frequency-dataset-unmanned-aerial-system-uas-signals-machine
 # Size: ~3.5GB, 7 DJI/Parrot models, BladeRF SDR
 # Includes Bluetooth/WiFi interference variants
@@ -28,7 +28,7 @@ mkdir -p "$DEST"
 
 if [ -z "${IEEE_TOKEN:-}" ]; then
     echo "============================================================"
-    echo "  IEEE_TOKEN not set — manual authentication required"
+    echo "  IEEE_TOKEN not set - manual authentication required"
     echo "============================================================"
     echo ""
     echo "DroneDetect is hosted on IEEE DataPort and requires a free account."

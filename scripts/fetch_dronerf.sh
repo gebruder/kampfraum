@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# fetch_dronerf.sh — Download DroneRF dataset from Mendeley Data
+# fetch_dronerf.sh - Download DroneRF dataset from Mendeley Data
 # Source: https://dx.doi.org/10.17632/f4c2b4n755.1
 # Size: ~40GB, CSV, 3 drone types
 # Parrot Bebop, Parrot AR, DJI Phantom

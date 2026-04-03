@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# fetch_zenodo.sh — Download RF/Video dataset from Zenodo
+# fetch_zenodo.sh - Download RF/Video dataset from Zenodo
 # Source: https://zenodo.org/record/4264467
 # No auth required. Uses Zenodo REST API.
 

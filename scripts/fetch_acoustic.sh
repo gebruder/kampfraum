@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# fetch_acoustic.sh — Download acoustic multiclass drone detection dataset
+# fetch_acoustic.sh - Download acoustic multiclass drone detection dataset
 # Paper: https://arxiv.org/abs/2509.04715
 # 32 drone categories, spectrograms, MFCCs
 #

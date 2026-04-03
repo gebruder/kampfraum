@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""normalize.py — Convert fetched datasets into normalized Parquet format.
+"""normalize.py - Convert fetched datasets into normalized Parquet format.
 
 Output schema:
     timestamp       int64       unix ms, null if unavailable
@@ -174,7 +174,7 @@ def normalize_rfuav(max_rows: int = 0):
     )
 
     if not data_files:
-        log.warning("RFUAV: No data files found in %s — repo may contain only pointers", src)
+        log.warning("RFUAV: No data files found in %s - repo may contain only pointers", src)
         return
 
     for data_path in data_files:
@@ -204,7 +204,7 @@ def normalize_rfuav(max_rows: int = 0):
                     if max_rows and len(rows) >= max_rows:
                         break
             else:
-                # Binary / CSV — read raw and store
+                # Binary / CSV - read raw and store
                 raw = np.fromfile(data_path, dtype=np.float32, count=max_rows * 1024 if max_rows else -1)
                 chunk_size = min(1024, len(raw))
                 for i in range(0, len(raw), chunk_size):
@@ -229,7 +229,7 @@ def normalize_rfuav(max_rows: int = 0):
         return
 
     null_reason("timestamp", "not available in RFUAV format", dataset_id)
-    null_reason("snr_db", "variable SNR — per-sample value not embedded in data files", dataset_id)
+    null_reason("snr_db", "variable SNR - per-sample value not embedded in data files", dataset_id)
     null_reason("flight_mode", "not labeled in RFUAV data files", dataset_id)
     _write_parquet(rows, "rf", dataset_id)
 
@@ -396,7 +396,7 @@ def normalize_acoustic(max_rows: int = 0):
     )
 
     if not data_files:
-        log.warning("Acoustic multiclass: No data files found — dataset not yet available")
+        log.warning("Acoustic multiclass: No data files found - dataset not yet available")
         return
 
     rows = []

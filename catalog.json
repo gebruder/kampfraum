@@ -77,7 +77,7 @@
       "license": "Unknown",
       "sensor_type": "acoustic",
       "drone_models": [
-        "32 categories — see paper for full list"
+        "32 categories - see paper for full list"
       ],
       "environment": "lab",
       "size_gb": null,
