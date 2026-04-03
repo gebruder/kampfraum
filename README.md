@@ -31,7 +31,7 @@ All datasets are converted to Parquet with the following schema:
 
 Kampfraum collects publicly available data into an easier interface. It does not have private battlespace: EW-contested environments, fiber-optic FPV drones, Shahed/Geran acoustic signatures, and operationally labeled flight data.
 
-Kampfraum sammelt offen verfügbare Daten in einer einfacheren Oberfläche. Es enthält keine privaten Gefechtsfelddaten: EW-belastete Umgebungen, Glasfaser-FPV-Drohnen, akustische Signaturen von Shahed/Geran und operativ gekennzeichnete Flugdaten.
+Kampfraum sammelt offen verfügbare Daten in einer einfacheren Oberfläche. Es enthält keinen privaten Kampfraum: EW-belastete Umgebungen, Glasfaser-FPV-Drohnen, akustische Signaturen von Shahed/Geran und operativ gekennzeichnete Flugdaten.
 
 ## Contributing
 
